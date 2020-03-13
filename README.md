@@ -1,2 +1,2 @@
 # algorithm-review
-Algorithm and Data Structure Study with Java
+Algorithm and data structure study with Java
