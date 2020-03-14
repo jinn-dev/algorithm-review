@@ -36,16 +36,49 @@ public class SortTest {
 		print(arr);
 	}
 	
+	/*
+	1.주어진 배열 중에서 최솟값을 찾는다.
+	2.그 값을 맨 앞에 위치한 값과 교체한다(패스(pass)).
+	3.맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.
+	4.하나의 원소만 남을 때까지 위의 1~3 과정을 반복한다.
+	*/
+	public void selectSort(int arr[]) {
+		int length = arr.length;
+		int minIndex, temp;
+		
+		for(int i=0; i<length-1; i++) {
+			minIndex = i;
+			
+			//최소값 탐색
+			for(int j=i+1; j<length; j++) {
+				if(arr[j] < arr[minIndex]) {
+					minIndex = j;	
+				}
+			}
+			
+			//최소값이 자기 자신이면 자료이동하지 않음
+			if(i != minIndex) {
+				temp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+		}
+		print(arr);
+	}
+	
 	public void swap(int a, int b) {
 		int temp = 0;
 		temp = a;
 		a = b;
 		b = temp;
 	}
-
+	
+	//배열 출력
 	public void print(int arr[]) {
 		for(Integer num : arr) {
 			System.out.print(num+" ");
 		}
 	}
+	
+	
 }
