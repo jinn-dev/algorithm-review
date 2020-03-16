@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class UniqueTest {
+public class UniqueText {
 
 	//아스키코드: 128개의 배열 이용
 	private boolean isUniqueAscii(String str) {
